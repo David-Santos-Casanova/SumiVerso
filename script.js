@@ -85,24 +85,10 @@ function createProjectCard(project) {
             metadata.appendChild(platformTags);
         }
         
-        content.appendChild(metadata);
-    
-        if (project.link) {
-            const link = document.createElement('a');
-            link.href = project.link;
-            link.textContent = 'Ver Proyecto';
-            link.target = '_blank'; // Abrir en nueva pestaña
-            content.appendChild(link);
-        } else {
-            const comingSoonLink = document.createElement('a');
-            comingSoonLink.className = 'disabled';
-            comingSoonLink.textContent = 'Próximamente';
-            content.appendChild(comingSoonLink);
-        }
-        
-        card.appendChild(cardImageWrapper);
-        card.appendChild(content);
-    // --- Lógica del Efecto 3D Inclinable ---
+            content.appendChild(metadata);
+            
+            card.appendChild(cardImageWrapper);
+            card.appendChild(content);    // --- Lógica del Efecto 3D Inclinable ---
     const tiltIntensity = 15; // Grados máximos de inclinación
 
     card.addEventListener('mousemove', (e) => {
